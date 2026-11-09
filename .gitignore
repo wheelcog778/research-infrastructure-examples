@@ -1,0 +1,22 @@
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Data stays out of the repository
+*.db
+*.db-shm
+*.db-wal
+*.csv
+*.jsonl
+*.json
+data/
+raw/
+reports/
+runs/
+
+# Editor / OS
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
