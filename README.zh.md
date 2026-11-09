@@ -55,3 +55,7 @@
 ## 许可
 
 MIT，见 [LICENSE](LICENSE)。
+
+## 联系
+
+作者：Q洗Y烟机 · 753073396@qq.com
