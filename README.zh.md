@@ -52,10 +52,16 @@
 - 行情面板、公告 JSONL、SQLite 数据库——代码假定你自己带数据。大部分路径相对于模块目录；有两处输入指向私有目录布局，必须改成你自己的：`sample_bank/bank.py` 的 `REPORTS` 与 `security_master/build_master.py` 的 `POOL`。
 - 任何线上接口凭证。抓取脚本调用公开接口，需要按你的环境改造。
 
+## 自检
+
+```bash
+python selftest.py      # 全部 .py 语法 + 临时库建 sample_bank 五张表；exit 0 = 全过
+```
+
 ## 许可
 
 MIT，见 [LICENSE](LICENSE)。
 
 ## 联系
 
-作者：Q洗Y烟机 · 753073396@qq.com
+作者：wheelcog778 · 753073396@qq.com

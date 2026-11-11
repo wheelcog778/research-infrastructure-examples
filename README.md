@@ -70,6 +70,12 @@ Read: [`sample_bank/README.md`](sample_bank/README.md)
 - Any live endpoint credentials. The fetchers call public endpoints and are meant
   to be adapted.
 
+## Self-check
+
+```bash
+python selftest.py      # syntax of every .py + sample_bank schema in a temp db; exit 0 = all pass
+```
+
 ## Requirements
 
 `requests` for the fetchers; everything else is standard library.
@@ -81,4 +87,4 @@ MIT. See [LICENSE](LICENSE).
 
 ## Contact
 
-Author: Q洗Y烟机 · 753073396@qq.com
+Author: wheelcog778 · 753073396@qq.com
