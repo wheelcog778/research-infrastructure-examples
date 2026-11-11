@@ -88,7 +88,7 @@ ST 事件股 515 只全部在主表内。
 ## 六、复现
 
 ```bash
-cd ~/研究/security_master
+cd security_master
 python fetch_delisted.py      # 抓名单 → delisted_list.csv（232 只）
 python probe_sources.py       # 20 只 × 4 源 → probe_result.json
 python verify_all.py          # 232 只校验 → verify_result.csv / verify_summary.json

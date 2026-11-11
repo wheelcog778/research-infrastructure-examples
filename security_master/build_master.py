@@ -1,9 +1,9 @@
 """T-201：合并证券主表 v0（在市 + 退市 + ST 区间标记）。
 
 输入：
-  研究/pool_v1/baseline/_cache/val_2025-09-30.json   在市快照（5,426 只）
-  研究/security_master/verify_result.csv             232 只退市名单验证
-  研究/security_master/st_ranges.csv                 632 个 ST 区间
+  research/pool_v1/baseline/_cache/val_2025-09-30.json   在市快照（5,426 只）
+  security_master/verify_result.csv             232 只退市名单验证
+  security_master/st_ranges.csv                 632 个 ST 区间
 输出：
   master.csv / master_summary.json / listdates.json（行情首条缓存，可断点续跑）
 
@@ -25,7 +25,7 @@ import requests
 ROOT = Path(__file__).resolve().parent
 MASTER = ROOT / "master.csv"
 CACHE = ROOT / "listdates.json"
-POOL = Path("~/研究/pool_v1/baseline/_cache/val_2025-09-30.json")
+POOL = Path("~/research/pool_v1/baseline/_cache/val_2025-09-30.json")
 UA = {"User-Agent": "Mozilla/5.0"}
 
 BOARDS = (

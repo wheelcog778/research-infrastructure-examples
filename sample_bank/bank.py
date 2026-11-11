@@ -9,7 +9,7 @@
   python bank.py label             # 用腾讯前复权日线补 T+1..T+60 收益
   python bank.py report            # 一页统计：覆盖、分数-收益关系、阻断频次
 
-库：研究/sample_bank/sample_bank.db（SQLite）
+库：sample_bank/sample_bank.db（SQLite）
 """
 from __future__ import annotations
 

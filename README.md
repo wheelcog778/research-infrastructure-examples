@@ -64,7 +64,9 @@ Read: [`sample_bank/README.md`](sample_bank/README.md)
 ## What is not included
 
 - Price panels, announcement JSONL, SQLite databases — the code expects you to
-  bring your own, and every path is relative.
+  bring your own. Most paths are relative to the module; two inputs point at a
+  private layout and must be repointed: `REPORTS` in `sample_bank/bank.py` and
+  `POOL` in `security_master/build_master.py`.
 - Any live endpoint credentials. The fetchers call public endpoints and are meant
   to be adapted.
 

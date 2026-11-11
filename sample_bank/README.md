@@ -26,10 +26,10 @@
 ## 三、怎么跑
 
 ```bash
-E:/python.exe 研究/sample_bank/bank.py init      # 建库
-E:/python.exe 研究/sample_bank/bank.py ingest    # 扫 reports/，幂等
-E:/python.exe 研究/sample_bank/bank.py label     # 补收益（腾讯前复权，带缓存）
-E:/python.exe 研究/sample_bank/bank.py report    # 一页统计
+python sample_bank/bank.py init      # 建库
+python sample_bank/bank.py ingest    # 扫 reports/，幂等
+python sample_bank/bank.py label     # 补收益（腾讯前复权，带缓存）
+python sample_bank/bank.py report    # 一页统计
 ```
 
 ## 四、当前实测（2026-11-08 首跑）
@@ -68,7 +68,7 @@ E:/python.exe 研究/sample_bank/bank.py report    # 一页统计
 
 ## 七、下一步（按顺序）
 
-1. **每天收盘后自动 ingest + label**（已落地）：Windows 任务 `HermesSampleBank1535`，周一至周五 15:35 跑 `run_daily.bat`，日志在 `logs/`。注意：bat 必须写成 **纯 ASCII + CRLF**，写中文注释或 UTF-8 换行会被 GBK 控制台读坏（实测会把 `cd /d` 那行整个吃掉）。
+1. **每天收盘后自动 ingest + label**（已落地）：用系统计划任务在周一至周五收盘后跑一个批处理脚本，日志落本地 `logs/`。注意：bat 必须写成 **纯 ASCII + CRLF**，写中文注释或 UTF-8 换行会被 GBK 控制台读坏（实测会把 `cd /d` 那行整个吃掉）。
 2. 把 `agent_notes` 做成否决器词表：统计每类理由的触发率与后续收益，回答「哪条否决器在赚钱、哪条在赔钱」。
 3. 全截面补齐（研究侧重算），把「没进池的票」也变成样本。
 4. 版本 cohort：v1.3 与 v1.5 在同一批日期上的 IC 差，是「迭代有没有用」的唯一硬证据。

@@ -1,6 +1,6 @@
 """T-201：从 ST 事件表生成按日 ST 区间（近似）。
 
-输入：研究/st_event_table/event_table.csv
+输入：st_event_table/event_table.csv
 输出：st_ranges.csv（code, start, end, type_start, end_reason, days, open）
 
 规则（状态机，按代码+日期排序）：
@@ -16,7 +16,7 @@ import csv
 from datetime import date
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[1]   # 研究/
+ROOT = Path(__file__).resolve().parents[1]   # 仓库根目录
 SRC = ROOT / "st_event_table" / "event_table.csv"
 OUT = Path(__file__).resolve().parent / "st_ranges.csv"
 

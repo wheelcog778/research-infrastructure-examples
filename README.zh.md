@@ -49,7 +49,7 @@
 
 ## 不包含什么
 
-- 行情面板、公告 JSONL、SQLite 数据库——代码假定你自己带数据，所有路径都是相对的。
+- 行情面板、公告 JSONL、SQLite 数据库——代码假定你自己带数据。大部分路径相对于模块目录；有两处输入指向私有目录布局，必须改成你自己的：`sample_bank/bank.py` 的 `REPORTS` 与 `security_master/build_master.py` 的 `POOL`。
 - 任何线上接口凭证。抓取脚本调用公开接口，需要按你的环境改造。
 
 ## 许可
